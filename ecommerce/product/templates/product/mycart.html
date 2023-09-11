@@ -1,0 +1,26 @@
+{% extends 'product/index.html' %}
+
+{% block one %}
+
+<div class="row">
+
+{% for i,j,k in list_final %}
+
+<div class="col-6"> 
+    <img src="{{i.image.url}}" height="200" width="200" >  <!-- jo model me field banayi h wahi lege , islye src me i.image.url-->
+    
+    <div> 
+    Price:{{i.price}}
+    you Ordered:{{j}}
+    Total : {{k}}
+
+</div>
+    
+<br>
+    
+</div>
+
+{% endfor %}
+</div>
+<div>  <h1> Grand Total : {{GT}} </h1> </div>
+{% endblock one %}
